@@ -29,7 +29,7 @@ const Header = () => {
           <NavLink href="/men">Men</NavLink>
           <NavLink href="/women">Women</NavLink>
           <NavLink href="/kids">Kids</NavLink>
-          <NavLink href="/collections">Collections</NavLink>
+          <NavLink href="/collections">Collectionsxcvxcvxcvxcvxcvxc</NavLink>
         </Nav>
         <Side />
         <MobileNav>
@@ -52,12 +52,14 @@ const MainHeader = styled.div`
   padding: 18px 32px;
   height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  overflow-x: auto;
+  overflow-y: hidden;
 `;
 
 const Nav = styled.nav`
   display: flex;
-  gap: 48px;
-  margin: 0px 48px;
+  gap: clamp(1rem, 13.6vw - 7.25rem, 4rem);
+  margin-left: 48px;
 
   @media ${QUERIES.tabletAndDown} {
     display: none;
@@ -79,6 +81,7 @@ const MobileNav = styled.nav`
 
 const Side = styled.div`
   flex: 1;
+  flex-shrink: 2;
 `;
 
 const NavLink = styled.a`
